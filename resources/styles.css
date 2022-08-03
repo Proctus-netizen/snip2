@@ -705,7 +705,7 @@
 /* WHY-US SECTION */
 .why-us-container {
     /* border: 2px solid red; */
-    margin-bottom: .2rem;
+    /* margin-bottom: .2rem; */
     padding: .5rem;
     /* background-image: url("./images/hd-wallpaper-g9d4341994_640.jpg"); */
     background-color: #16098bf1;
@@ -819,7 +819,81 @@
     content: "\f007";
   } */
 
-
+/* CONTACT-US SECTION */
+.contact-us {
+    min-height: 400px; 
+    background-image: url("./images/sewing-machine-640.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.contact-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 0, 41);
+    opacity: .5;
+    z-index: -1;
+}
+.contact-us h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.4rem;
+    padding-top: 3rem;
+}
+.contact-us p {
+    font-size: 1.4rem;
+    line-height: 1rem;
+    font-family:'Courier New', Courier, monospace;
+    /* border: 2px solid red; */
+    padding-block: 1rem;
+    width: 80%;
+    margin: auto;
+    font-weight: bolder;
+}
+.contact-us button {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    /* font-size: 1rem; */
+    background-color: blanchedalmond;
+    letter-spacing: .1rem;
+    font-family: 'Roboto Slab', serif;
+    border: 0;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+.contact-us button:hover {
+    background-color: rgb(20, 59, 2);
+    color: blanchedalmond;
+    cursor: pointer;
+}
+/* media queries for contact-us section */
+@media (min-width: 640px) {
+    .contact-us {
+        background-image: url("./images/sewing-machine-1280.webp");
+    }
+}
+@media (min-width: 1280px) {
+    .contact-us {
+        background-image: url("./images/sewing-machine-1920.webp");
+    }
+}
+@media (max-width: 405px) {
+    .contact-us h1 {
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+    .contact-us p {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
 
 /*to minimise transition when resizing screen [its not really necessary]*/
 .resize-animation-stopper * {
