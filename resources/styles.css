@@ -598,7 +598,7 @@
 /* SERVICES SECTION */
 .services-container {
     border-top: 2px solid rgba(1, 1, 83, 0.425);
-    background-image: url("./images/services-background.webp");
+    /* background-image: url("./images/services-background.webp"); */
     background-position: center;
     background-size: cover;
     /* background-repeat: no-repeat; */
@@ -705,11 +705,10 @@
 /* WHY-US SECTION */
 .why-us-container {
     /* border: 2px solid red; */
-    /* border-radius: 1rem; */
     margin-bottom: .2rem;
     padding: .5rem;
     /* background-image: url("./images/hd-wallpaper-g9d4341994_640.jpg"); */
-    background-color: #8b0909c4;
+    background-color: #16098bf1;
     /* background-color: #3c3277a6; */
 }
 .why-us-container #why-header {
@@ -766,7 +765,7 @@
 .pricing::before,
 .experience::before,
 .reputation::before {
-    color: #8b0909dc;
+    color: #16098bd2;
     font-family: "Font Awesome 6 Free";
     padding: .2rem;
     font-weight: 900;
