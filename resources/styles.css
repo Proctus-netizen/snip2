@@ -820,8 +820,8 @@
   } */
 
 /* CONTACT-US SECTION */
-.contact-us {
-    min-height: 400px; 
+.contact-us-container {
+    /* min-height: 700px;  */
     background-image: url("./images/sewing-machine-640.webp");
     background-repeat: no-repeat;
     background-position: center;
@@ -831,7 +831,7 @@
     position: relative;
     z-index: 1;
 }
-.contact-us::before {
+.contact-us-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -839,52 +839,103 @@
     width: 100%;
     height: 100%;
     background-color: rgb(7, 0, 41);
-    opacity: .5;
+    opacity: .7;
     z-index: -1;
 }
+.contact-us {
+    /* border: 2px solid black; */
+    padding-top: 2rem;
+}
 .contact-us h1 {
+    /* border: 2px solid white; */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2.4rem;
-    padding-top: 3rem;
+    font-size: 2rem;
+    /* padding-top: 3rem; */
 }
 .contact-us p {
-    font-size: 1.4rem;
-    line-height: 1rem;
+    /* border: 2px solid white; */
+    font-size: 1.1rem;
+    line-height: 1.2rem;
     font-family:'Courier New', Courier, monospace;
-    /* border: 2px solid red; */
     padding-block: 1rem;
-    width: 80%;
+    width: 100%;
     margin: auto;
     font-weight: bolder;
 }
-.contact-us button {
+.contact-us-list {
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+.contact-us-list .contact {
+    /* border: 2px solid black; */
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: .5rem;
+}
+.contact h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+}
+.contact p {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+}
+.contact button {
     margin-top: 1rem;
-    padding: 1rem;
-    font-weight: bold;
-    /* font-size: 1rem; */
-    background-color: blanchedalmond;
+    padding: .5rem;
+    font-weight: bolder;
+    font-size: .9rem;
+    background-color: rgb(255, 255, 255);
     letter-spacing: .1rem;
     font-family: 'Roboto Slab', serif;
     border: 0;
     transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
-.contact-us button:hover {
+.contact button:hover {
     background-color: rgb(20, 59, 2);
     color: blanchedalmond;
     cursor: pointer;
 }
 /* media queries for contact-us section */
+@media (min-width: 425px) {
+    .contact-us h1 {
+        font-size: 2.4rem;
+    }
+    .contact-us p {
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    .contact-us-list {
+        padding-block: 2rem;
+    }
+}
+@media (min-width: 768px) {
+    .contact h1 {
+        font-size: 1.3rem;
+    }
+    .contact p {
+        font-size: 1.2rem;
+    }
+    .contact-us-list {
+        padding-block: 2rem;
+    }
+}
 @media (min-width: 640px) {
-    .contact-us {
+    .contact-us-container {
         background-image: url("./images/sewing-machine-1280.webp");
     }
 }
 @media (min-width: 1280px) {
-    .contact-us {
+    .contact-us-container {
         background-image: url("./images/sewing-machine-1920.webp");
     }
 }
-@media (max-width: 405px) {
+/* @media (max-width: 405px) {
     .contact-us h1 {
         font-size: 2rem;
         padding-top: 2rem;
@@ -893,7 +944,7 @@
         width: 100%;
         font-size: 1rem;
     }
-}
+} */
 
 /*to minimise transition when resizing screen [its not really necessary]*/
 .resize-animation-stopper * {
